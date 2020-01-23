@@ -1,4 +1,4 @@
 - In your user's home create a directory called .aws
 - In it save a file called "credentials" as by the example included as a file and set the proper token
-- Run with node server.js
+- Run with node index.js
 - Make sure the output of the program shows the correct tokens, otherwise you need to unset other variables you may have on your computer

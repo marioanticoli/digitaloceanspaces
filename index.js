@@ -10,14 +10,13 @@ aws.config.getCredentials(function (err) {
 });
 
 const spacesEndpoint = new aws.Endpoint('sfo2.digitaloceanspaces.com');
-const bucket = "aris-sample-imr";
 
 const s3 = new aws.S3({
   endpoint: spacesEndpoint
 });
 
 
-function getBuckets(prefix) {
+function getBuckets(bucket, prefix) {
   const params = {
     Bucket: bucket,
     Prefix: prefix
@@ -35,5 +34,6 @@ function getBuckets(prefix) {
   });
 }
 
+const bucketName = "aris-sample-imr";
 const pathToFile = 'qr-s010/sensor_data/2019-11-01/lucint_imagery/';
-getBuckets(pathToFile);
+getBuckets(bucketName, pathToFile);
