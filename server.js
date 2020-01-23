@@ -35,4 +35,5 @@ function getBuckets(prefix) {
   });
 }
 
-getBuckets('qr-s010/sensor_data/2019-11-01/lucint_imagery/');
+const pathToFile = 'qr-s010/sensor_data/2019-11-01/lucint_imagery/';
+getBuckets(pathToFile);
