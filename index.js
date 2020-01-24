@@ -1,6 +1,7 @@
 const aws = require('aws-sdk');
 const fs = require('fs');
 
+// Just for showing correct credentials; not necessary
 aws.config.getCredentials(function (err) {
   if (err) console.log(err.stack);
   else {
