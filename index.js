@@ -15,12 +15,6 @@ const s3 = new aws.S3({
   endpoint: spacesEndpoint
 });
 
-
-function getBuckets(bucket, prefix) {
-
-
-}
-
 const listFilesPromise = (bucket, prefix) => {
   const params = {
     Bucket: bucket,
