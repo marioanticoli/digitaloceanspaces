@@ -30,7 +30,7 @@ const listFilesPromise = (bucket, prefix) => {
   })
 }
 
-const getFile = (bucket, key) => {
+const getFilePromise = (bucket, key) => {
   const params = {
     Bucket: bucket,
     Key: key
@@ -51,7 +51,7 @@ let res;
 async function main() {
   res = await listFilesPromise(bucketName, pathToFile)
   console.log(res);
-  res = await getFile(bucketName, key);
+  res = await getFilePromise(bucketName, key);
   console.log(res);
   fs.writeFile("./images/test.tif", res, function (err) {
     if (err) {
