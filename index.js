@@ -54,8 +54,8 @@ const pathToFile = "qr-s010/sensor_data/2019-11-01/lucint_imagery/";
 const key = "qr-s010/sensor_data/2019-11-01/lucint_imagery/20191101T002245Z/LWIR_01/LWIR_01_19700109T064922Z_00000065.gray.tif";
 let res;
 async function main() {
-  // res = await listFilesPromise(bucketName, pathToFile)
-  // console.log(res);
+  res = await listFilesPromise(bucketName, pathToFile)
+  console.log(res);
   res = await getFile(bucketName, key);
   console.log(res);
   fs.writeFile("./images/test.tif", res, function (err) {
