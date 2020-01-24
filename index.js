@@ -53,7 +53,9 @@ async function main() {
   console.log(res);
   res = await getFilePromise(bucketName, key);
   console.log(res);
-  fs.writeFile("./images/test.tif", res, function (err) {
+  let p = key.split("/")
+  let filename = p[p.length - 1];
+  fs.writeFile(`./images/${filename}`, res, function (err) {
     if (err) {
       return console.log(err);
     }
